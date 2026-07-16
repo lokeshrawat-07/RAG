@@ -1,0 +1,34 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Vector database
+chroma-db/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+temp/
+tmp/

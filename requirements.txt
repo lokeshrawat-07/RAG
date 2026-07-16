@@ -1,0 +1,41 @@
+# LLM Providers
+langchain
+langchain-core
+langchain-community
+
+langchain-groq
+langchain-mistralai
+
+
+# Embeddings (local)
+sentence-transformers
+
+# Vector Database
+chromadb
+
+# Document Loaders & Processing
+pypdf
+unstructured
+python-docx
+
+# Text Splitting
+tiktoken
+
+# Environment Variables
+python-dotenv
+
+# API Requests
+requests
+
+# Optional UI (choose one)
+streamlit
+# fastapi
+# uvicorn
+
+# Utilities
+numpy
+pandas
+tqdm
+
+# Optional (better performance)
+scikit-learn
