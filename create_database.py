@@ -14,6 +14,9 @@ from langchain_community.vectorstores import Chroma
 from dotenv import load_dotenv
 
 load_dotenv()
+api_key = os.environ.get("MISTRAL_API_KEY", "")
+if api_key:
+    os.environ["MISTRAL_API_KEY"] = api_key.strip()
 
 data = PyPDFLoader("document loaders/human_health.pdf")
 docs = data.load()

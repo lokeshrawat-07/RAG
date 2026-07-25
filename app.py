@@ -16,6 +16,9 @@ from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 
 load_dotenv()
+api_key = os.environ.get("MISTRAL_API_KEY", "")
+if api_key:
+    os.environ["MISTRAL_API_KEY"] = api_key.strip()
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
