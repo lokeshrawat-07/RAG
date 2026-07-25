@@ -19,6 +19,7 @@ unstructured
 python-docx
 
 # Text Splitting
+langchain-text-splitters
 tiktoken
 
 # Environment Variables
