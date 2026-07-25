@@ -9,7 +9,7 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings  import HuggingFaceEmbeddings
+from langchain_mistralai import MistralAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from dotenv import load_dotenv
 
@@ -25,8 +25,8 @@ splitter = RecursiveCharacterTextSplitter(
 
 chunks = splitter.split_documents(docs)
 
-embedding_model = HuggingFaceEmbeddings(
-    model_name ="sentence-transformers/all-MiniLM-L6-v2"
+embedding_model = MistralAIEmbeddings(
+    model="mistral-embed"
 )
 
 vectorstore = Chroma.from_documents(

@@ -8,7 +8,7 @@ langchain-mistralai
 
 
 # Embeddings (local)
-sentence-transformers
+# sentence-transformers
 
 # Vector Database
 chromadb

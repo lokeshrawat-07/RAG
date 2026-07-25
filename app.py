@@ -10,7 +10,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_mistralai import MistralAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
@@ -222,11 +222,11 @@ if "doc_name" not in st.session_state:
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 PERSIST_DIR = "chroma-db"
-EMBED_MODEL  = "sentence-transformers/all-MiniLM-L6-v2"
+EMBED_MODEL  = "mistral-embed"
 
 @st.cache_resource(show_spinner=False)
 def get_embedding_model():
-    return HuggingFaceEmbeddings(model_name=EMBED_MODEL)
+    return MistralAIEmbeddings(model=EMBED_MODEL)
 
 @st.cache_resource(show_spinner=False)
 def get_llm():
