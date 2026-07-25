@@ -40,3 +40,6 @@ tqdm
 
 # Optional (better performance)
 scikit-learn
+
+# Render deployment fix for ChromaDB sqlite3 requirement
+pysqlite3-binary
